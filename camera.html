@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Hello Avatar</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <script data-ad-client="ca-pub-2985510986843870" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <style>
+        /*
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        */
+
+        .canvas-container {
+            /*width: 800px;*/
+            /*max-width: 100%;*/
+            /*display: flex;*/
+            /*display: block;*/
+            /*justify-content: center;*/
+            position: absolute;
+            width: 500px;
+            height: 500px;
+        }
+
+        .camera-canvas {
+            position: absolute;
+            transform: scale(0.3, 0.3);
+            transform-origin: 0 0;
+            left: 10px;
+            top: 10px;
+            display: inline-block;
+        }
+
+        .camera-canvas-removed {
+            position: absolute;
+            transform: scale(0, 0);
+            transform-origin: 0 0;
+            left: 10px;
+            top: 10px;
+            display: inline-block;
+        }
+
+        #main {
+            left: 0;
+            top: 0;
+            position: absolute;
+        }
+
+        .illustration-canvas {
+            /*background-color: green;*/
+            /*border: 1px solid #eeeeee;*/
+        }
+
+        #tempImage {
+
+            background-repeat: no-repeat;
+            background-size: 100%;
+            border: 12px solid;
+            border-image: linear-gradient(to right, #81b0f7be, #ae70b9aa, #9391e8aa);
+            border-image-slice: 1;
+        }
+
+        #output{
+            padding: 12px;
+        }
+
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            color: black;
+        }
+
+        .footer-text {
+            max-width: 600px;
+            text-align: center;
+            margin: auto;
+        }
+
+        @media only screen and (max-width: 600px) {
+
+            .footer-text,
+            .dg {
+                display: none;
+            }
+        }
+
+        /*
+         *  The following loading spinner CSS is from SpinKit project
+         *  https://github.com/tobiasahlin/SpinKit
+         */
+        .sk-spinner-pulse {
+            width: 20px;
+            height: 20px;
+            margin: auto 10px;
+            float: left;
+            background-color: #333;
+            border-radius: 100%;
+            -webkit-animation: sk-pulseScaleOut 1s infinite ease-in-out;
+            animation: sk-pulseScaleOut 1s infinite ease-in-out;
+        }
+
+        @-webkit-keyframes sk-pulseScaleOut {
+            0% {
+                -webkit-transform: scale(0);
+                transform: scale(0);
+            }
+
+            100% {
+                -webkit-transform: scale(1.0);
+                transform: scale(1.0);
+                opacity: 0;
+            }
+        }
+
+        @keyframes sk-pulseScaleOut {
+            0% {
+                -webkit-transform: scale(0);
+                transform: scale(0);
+            }
+
+            100% {
+                -webkit-transform: scale(1.0);
+                transform: scale(1.0);
+                opacity: 0;
+            }
+        }
+
+        .spinner-text {
+            float: left;
+        }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <script type="text/javascript">
+        /*get url*/
+        function getUrlParams() {
+            var params = {};
+            window.location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (str, key, value) {
+                params[key] = value;
+            });
+            return params;
+        }
+        document.addEventListener("DOMContentLoaded", function (e) {
+            const params = getUrlParams();
+            console.log(params)
+            const use_yn = params["use_yn"];
+            const color = params["color"];
+            const mainEle = document.querySelector("#tempImage");
+            document.querySelector("#output").addEventListener("DOMSubtreeModified", function () {
+                if (use_yn === "N") {
+                    document.querySelector("#output").style = 'display: none !important';
+                    document.querySelector("#keypoints").style = 'display: none !important';
+                }
+            })
+            if (!color) {
+                document.getElementById("tempImage").style.backgroundImage = `url(${opener.document.querySelector(".file-upload-image").src})`;
+                document.getElementById("tempImage").style.backgroundSize = 'cover';
+            } else {
+                mainEle.style.backgroundColor = "#" + color;
+            }
+            // mainEle.value = use_yn;
+        });
+    </script>
+
+    <div id="info" style='display:none'>
+    </div>
+    <div id="loading" style='position: relative; left: 0'>
+        <span class="spinner-text" id="status"></span>
+        <div class="sk-spinner sk-spinner-pulse"></div>
+    </div>
+    <div class="canvas-container">
+        <div id='main' style='display:none'>
+            <video id="video" playsinline style=" -moz-transform: scaleX(-1);
+            -o-transform: scaleX(-1);
+            -webkit-transform: scaleX(-1);
+            transform: scaleX(-1);
+            display: none;
+            ">
+            </video>
+            <canvas id="output"></canvas>
+            <canvas id="keypoints"></canvas>
+        </div>
+        <canvas id="tempImage" class="illustration-canvas"></cavnas>
+    </div>
+    <script src="camera.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        /*const imgData = localStorage.getItem('imgData');
+        console.log(imgData);
+        document.getElementById("tempImage").style.backgroundImage = "url(" + imgData + ")";*/
+    </script>
+</body>
+
+</html>

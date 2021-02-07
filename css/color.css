@@ -1,0 +1,61 @@
+@font-face{font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; src: local(Franklin), url(https://fonts.adobe.com/fonts/franklin-gothic-urw.woff) format("woff");} 
+html {margin:0;height: 100%; }
+body{margin:0;background: url(../img/avava-background2.png) no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;
+/*overflow-y: hidden; overflow-x: hidden;*/}
+/* header */
+.main-container{display: block; height:100vh;}
+
+.ava-header{padding: 20px;}
+.header-logo{margin:10px; display: inline-block;}
+.header-logo img{width:30%;}
+
+.create-flex-container{display: flex; width: 100%; height: 800px;}
+.create-left-wrap{display: flex; flex-direction: column; width: 50%;justify-content: center; margin: 0 auto;}
+.create-left{margin: 0 auto; display: inline-block; border: 2px solid #ba86ff; border-radius: 49px; background: #fffdff; box-shadow: 4px 4px 4px 4px #f3f3f3;}
+.create-title h1{font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; display:inline-block; margin:20px; padding: 20px; font-size:80px; text-align: center; color: #3E0793; text-shadow: 4px 3px 0 #dac6c6;}
+.create-text{margin: 5px; padding-left: 30px;}
+.create-check{display: inline-block;}
+.create-check img{width: 27px;}
+.create-choose{font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; margin: 5px; padding: 5px; font-size: 18px; line-height: 7px; color: #434445; position: absolute; display: inline;}
+.left-button{margin-top:50px;}
+.ava-right-wrap{display: flex; flex-direction: column; width: 50%; justify-content: center;}
+.ava-right{width:80%; margin: 0 auto; padding: 10px; }
+.create-toggle-btn{margin: 10px; padding: 10px; display: block;}
+.create-button{text-align: center;}
+input[type="button"]{background-color: #af83f6; color: #ffffff; border-radius: 10px; text-align: center; height: 50px; width:120px; margin: 5px; transition: 0.5s; vertical-align: middle; letter-spacing: 1.5px; border: none; text-decoration: none; font-size: 15px;}
+input[type="button"]:hover {background-color: #6714ed;cursor: pointer;}
+input[type="button"]:focus{border: none; outline: none;}
+
+.switch {float: right; position: relative; display: inline-block; width: 60px; height: 34px;}
+  
+  /* Hide default HTML checkbox */
+  .switch input {opacity: 0; width: 0; height: 0;}
+  
+  /* The slider */
+  .slider {position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #a5a5a5; -webkit-transition: .4s; transition: .4s;}
+  .slider:before { position: absolute; content: ""; height: 26px; width: 26px; left: 4px; bottom: 4px; background-color: white; -webkit-transition: .4s; transition: .4s;}
+  input:checked + .slider {background-color: #7b37ff}
+  input:focus + .slider {box-shadow: 0 0 1px #7b37ff}
+  input:checked + .slider:before {-webkit-transform: translateX(26px); -ms-transform: translateX(26px); transform: translateX(26px);}
+  
+  /* Rounded sliders */
+.slider.round {border-radius: 34px}
+.slider.round:before {border-radius: 50%;}
+.ava-setting-view-box{ width: 594px; height: 480px; display: inline-block; }
+.ava-setting-view{display: none;}
+.ava-setting-view.active{display: inline-block; width: 100%;} 
+.picker-title{border-bottom: 2px solid #ba86ff;}
+.picker-title h2{font-size: 17px; color: #1f003e; margin: 10px; display: block; text-align: center; font-weight: 600;}
+
+@media only all and (max-width:1440px){
+  .create-flex-container{display: block;}
+  .ava-right-wrap{margin: 0 auto;}
+  .ava-right{width: 100%;}
+}
+
+@media only all and (max-width:1024px){
+  .create-flex-container{display: block;}
+  .create-left-wrap{display: flex; width:100%;}
+  .ava-right-wrap{display: block; width: 80%; margin: 0 auto; padding-top: 50px;}
+}
+
