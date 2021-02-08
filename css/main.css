@@ -1,72 +1,54 @@
-body {
-  font-family: Montserrat, sans-serif;
-  font-weight: 900;
-}
-
-body, body * {
-  cursor: none;
-}
-
+@font-face{font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; src: local(Franklin), url(https://fonts.adobe.com/fonts/franklin-gothic-urw.woff) format("woff");} 
+html {margin:0;height: 100%; }
+body{margin:0; background: url(../img/avava-background2.png) no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;}
 .shapes {
   position: relative;
-  height: 30vh;
-  width: 30vw;
-  background: #2128bd;
+  background: #560aa9;
   overflow: hidden;
+  /*height: 30vh;
+  width: 30vw;*/
 }
-
 .shape {
   will-change: transform;
   position: absolute;
   border-radius: 50%;
 }
-
 .shape.shape-1 {
-  background: #005ffe;
+  background: #614dd4;
   width: 650px;
   height: 650px;
   margin: -325px 0 0 -325px;
 }
-
 .shape.shape-2 {
   background: #ffe5e3;
   width: 440px;
   height: 440px;
   margin: -220px 0 0 -220px;
 }
-
 .shape.shape-3 {
   background: #ffcc57;
   width: 270px;
   height: 270px;
   margin: -135px 0 0 -135px;
 }
-
 .content {
-  top: 0;
-  left: 0;
-  position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  font-size: 50px;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 100vh;
-  width: 100vw;
-  /*background: #fff;*/
+  justify-content: center;
+  align-items: center;
+  background: #fff;
   mix-blend-mode: screen;
+  position: relative;
+  height: 100%;
 }
-
 h1 {
   color: #000;
   margin: 0;
-  text-align: center;
-}
+  text-align: left;
+  font-size: 100px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
+}
 .cursor {
   position: fixed;
   background: #2128bd;
@@ -75,42 +57,33 @@ h1 {
   margin: -10px 0 0 -10px;
   border-radius: 50%;
   will-change: transform;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  user-select: none;
   pointer-events: none;
   z-index: 10000;
 }
-
-::-moz-selection {
-  color: #fff;
-  background: #2128bd;
-}
-
 ::selection {
   color: #fff;
   background: #2128bd;
 }
+
+
 /*# sourceMappingURL=main.css.map */
-@font-face{font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; src: local(Franklin), url(https://fonts.adobe.com/fonts/franklin-gothic-urw.woff) format("woff");} 
-html {margin:0;height: 100%; }
-body{margin:0; background: url(../img/avava-background2.png) no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;
-/*overflow-y: hidden; overflow-x: hidden;*/}
+
+/*overflow-y: hidden; overflow-x: hidden;*/
 .main-container{display: block; min-height: 100vh;}
 .ava-flex-container{display: flex; width: 100%; height: 800px; }
 .ava-header{padding: 20px;}
 .header-logo{margin:10px; display: inline-block;}
 .header-logo img{width:30%;}
-
+.ava-left{padding: 40px; margin: 30px;cursor: default;}
 .ava-left-wrap{display: flex; flex-direction: column; width: 50%; justify-content: center;}
 
-.left-title{font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; display:inline-block; margin:10px; font-size:93px; text-align: left;
-background-image: linear-gradient(316deg, #4062bb 0%, #5200ae 74%); -webkit-text-fill-color: transparent; -webkit-background-clip: text;padding: 10px;}
+/* .left-title{font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; display:inline-block; margin:10px; font-size:93px; text-align: left;
+background-image: linear-gradient(316deg, #4062bb 0%, #5200ae 74%); -webkit-text-fill-color: transparent; -webkit-background-clip: text;padding: 10px;} */
 
 .left-text{font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; margin: 5px; padding: 5px; font-size: 23px; color:#3e266b;}
-.left-text p{line-height: 2rem; position: relative; text-align: left; left: 15px;}
-.left-button{margin-top:80px;}
+.left-text p{line-height: 2rem;text-align: left; left: 15px;}
+.left-button{margin-top:20px;}
 input[type="button"]{background-color: #FF738D; color: #ffffff; border-radius: 10px; text-align: center; height: 65px; padding: 15px; width:200px; margin: 5px; float: right;
 font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size: 20px; cursor: pointer; display: inline-block; position: relative; 
 transition: 0.5s; vertical-align: middle; letter-spacing: 3.5px; border: none; text-decoration: none;}
@@ -118,10 +91,11 @@ input[type="button"]:hover {padding-right: 40px;}
 input[type="button"]:hover:after{opacity: 1; right: 0;}
 input[type="button"]:focus{border: none; outline: none;}
 input[type="button"]:after{content: '\00bb'; position: absolute; opacity: 0; top: 0; right: -20px; transition: 0.5s; border: none;}
-.left-recommended{padding: 20px; display: inline-block; float: left; top: 40px; position: relative;}
+.left-recommended{padding: 20px; display: inline-block; float: left; top: 10px; position: relative;}
+.recommended-wrap{display: inline-block;position: relative;left: 75px;}
 .recommended-text{display: inline-block; color: #343747; font-family: inherit; font-weight: 600; padding: 20px; font-size: 19px;}
 .recommended-text:after{content:""; display: block; width: 157px; border-bottom: 2px solid #343747; margin: 15px -15px;}
-.recommended-img img{width:150px; float: right;}
+.recommended-img img{width:150px;}
 
 .ava-right-wrap{display: flex; flex-direction: column; width: 50%; justify-content: center; }
 .ava-right{width:80%; margin: 0 auto; padding: 10px;}

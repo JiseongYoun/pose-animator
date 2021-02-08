@@ -14,6 +14,7 @@
  * limitations under the License.
  * =============================================================================
  */
+import checkBoxImage from './img/check2.png'
 import "./css/control.css";
 import * as posenet_module from '@tensorflow-models/posenet';
 import * as facemesh_module from '@tensorflow-models/facemesh';
@@ -179,9 +180,9 @@ function setupGui(cameras) {
   <div class="ment">
   Add "Display Capture" on Broadcaster Right-click on the "Display Capture" Go to "properties" :</div>
   <div class="ment-box">
-  <img src="./img/check2.png">
+  <img src="${checkBoxImage}">
    Show Cursor&nbsp;:&nbsp;disabled.<br>
-  <img src="./img/check2.png">
+   <img src="${checkBoxImage}">
   Crop&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;You have to adjust as you wish.<br>
   </div>
   </div>

@@ -11,15 +11,16 @@ body{margin:0;background: url(../img/avava-background2.png) no-repeat center cen
 
 .create-flex-container{display: flex; width: 100%; height: 800px;}
 .create-left-wrap{display: flex; flex-direction: column; width: 50%;justify-content: center; margin: 0 auto;}
-.create-left{margin: 0 auto; display: inline-block; border: 2px solid #ba86ff; border-radius: 49px; background: #fffdff; box-shadow: 4px 4px 4px 4px #f3f3f3;}
-.create-title h1{font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; display:inline-block; margin:20px; padding: 20px; font-size:80px; text-align: center; color: #3E0793; text-shadow: 4px 3px 0 #dac6c6;}
-.create-text{margin: 5px; padding-left: 30px;}
+.create-left{margin: 0 auto; display: inline-block;}
+.create-title h1{font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; display:inline-block; font-size:80px; text-align: center; color: #3E0793; text-shadow: 4px 3px 0 #dac6c6;}
+.create-text{margin: 5px;}
 .create-check{display: inline-block;}
 .create-check img{width: 27px;}
-.create-choose{font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; margin: 5px; padding: 5px; font-size: 18px; line-height: 7px; color: #434445; position: absolute; display: inline;}
+.create-choose{font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; margin: 5px; padding: 5px; font-size: 24px; color: #434445; position: absolute; display: inline;}
 .left-button{margin-top:50px;}
 .ava-right-wrap{display: flex; flex-direction: column; width: 50%; justify-content: center;}
 .ava-right{width:80%; margin: 0 auto; padding: 10px; }
+.create-check{padding:10px;}
 .create-toggle-btn{margin: 10px; padding: 10px; display: block;}
 .create-button{text-align: center;}
 input[type="button"]{background-color: #af83f6; color: #ffffff; border-radius: 10px; text-align: center; height: 50px; width:120px; margin: 5px; transition: 0.5s; vertical-align: middle; letter-spacing: 1.5px; border: none; text-decoration: none; font-size: 15px;}
@@ -41,11 +42,10 @@ input[type="button"]:focus{border: none; outline: none;}
   /* Rounded sliders */
 .slider.round {border-radius: 34px}
 .slider.round:before {border-radius: 50%;}
-.ava-setting-view-box{ width: 594px; height: 480px; display: inline-block; }
+.ava-setting-view-box{width: 594px; height: 480px; display: inline-block; background: #FFFFFF; border-radius: 100px; box-shadow: 4px 4px 8px -3px grey; border: solid 2px #846eff; margin-top: 20px; }
 .ava-setting-view{display: none;}
 .ava-setting-view.active{display: inline-block; width: 100%;} 
-.picker-title{border-bottom: 2px solid #ba86ff;}
-.picker-title h2{font-size: 17px; color: #1f003e; margin: 10px; display: block; text-align: center; font-weight: 600;}
+.picker-title h2{font-size: 17px; color: #1f003e; margin: 10px; padding: 10px; display: block; text-align: center; font-weight: 600;}
 
 @media only all and (max-width:1440px){
   .create-flex-container{display: block;}

@@ -3,7 +3,6 @@ body {
   }
   
   .file-upload {
-    background-color: #ffffff;
     width: 548px;
     margin: 0 auto;
     padding: 20px;
@@ -60,7 +59,7 @@ body {
     position: relative;
     border-radius: 10px;
     height: 24.2vh;
-    
+    background: #FFFFFF;
   }
   
   .image-dropping,

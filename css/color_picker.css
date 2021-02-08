@@ -23,7 +23,6 @@
     float: left;
     width: 200px;
     display: inline-block;
-    background: #FFFFFF;
 }
 
 .color-picker-container .picker-container .canvas-container.active {
