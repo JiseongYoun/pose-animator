@@ -6,14 +6,11 @@
     <link rel="stylesheet" href="./css/reset.css">
     <script data-ad-client="ca-pub-2985510986843870" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <style>
-        /*
+        
         body {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
+            background: linear-gradient(to right, #e8f1ffbe, #ffffffaa, #e6daffaa);
         }
-        */
+        
 
         .canvas-container {
             /*width: 800px;*/
@@ -21,10 +18,12 @@
             /*display: flex;*/
             /*display: block;*/
             /*justify-content: center;*/
-            position: absolute;
+            /*position: absolute;*/
             width: 500px;
-            height: 500px;
+            margin: 10px;
+            padding: 10px;
         }
+        .header-logo a img{width:30%; padding-bottom: 10px;}
 
         .camera-canvas {
             position: absolute;
@@ -45,9 +44,10 @@
         }
 
         #main {
-            left: 0;
-            top: 0;
+            left: 25px;
+            top: 83px;
             position: absolute;
+            
         }
 
         .illustration-canvas {
@@ -59,13 +59,13 @@
 
             background-repeat: no-repeat;
             background-size: 100%;
-            border: 12px solid;
-            border-image: linear-gradient(to right, #81b0f7be, #ae70b9aa, #9391e8aa);
+            border: 5px solid #9e67f4;
+            /*border-image: linear-gradient(to right, #81b0f7be, #ae70b9aa, #9391e8aa);*/
             border-image-slice: 1;
         }
 
         #output{
-            padding: 12px;
+            /*padding: 12px;*/
         }
 
         .footer {
@@ -177,6 +177,9 @@
         <div class="sk-spinner sk-spinner-pulse"></div>
     </div>
     <div class="canvas-container">
+        <div class="header-logo">
+            <a href="index.html" target="_blank"><img src="./img/Ava_logo2.png"></a>
+          </div>
         <div id='main' style='display:none'>
             <video id="video" playsinline style=" -moz-transform: scaleX(-1);
             -o-transform: scaleX(-1);

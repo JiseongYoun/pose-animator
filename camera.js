@@ -163,7 +163,7 @@ function setupGui(cameras) {
     guiState.camera = cameras[0].deviceId;
   }
 
-  const gui = new dat.GUI({width: 300});
+  const gui = new dat.GUI({width: 315});
 
   let multi = gui.addFolder('Your Avatar');
   gui.add(guiState, 'List', Object.keys(avatarSvgs)).onChange(() => parseSVG(avatarSvgs[guiState.List]));
@@ -178,13 +178,19 @@ function setupGui(cameras) {
   divEle.innerHTML = `
   <div class="control-wrap">
   <div class="control-recommend"><img src="${inforMation}"><h1>We recommend Google Chrome browser.</h1></div>
-  <div class="ment">
+  <div class="ment-wrap">
   Add "Display Capture" on Broadcaster Right-click on the "Display Capture" Go to "properties" :</div>
   <div class="ment-box">
-  <img src="${checkBoxImage}">
-   Show Cursor&nbsp;:&nbsp;disabled.<br>
-   <img src="${checkBoxImage}">
-  Crop&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;You have to adjust as you wish.<br>
+  <div class="ment-content-01">
+  <div class="ment-title-01">
+  <img src="${checkBoxImage}"><a>Show Cursor</a></div>
+  <h1>: disabled.</h1>
+   </div>
+  <div class="ment-content-02">
+  <div class="ment-title-02">
+   <img src="${checkBoxImage}"><a>Crop</a></div>
+   <h1>: You have to adjust as you wish.</h1>
+  </div>
   </div>
   </div>
   </div>

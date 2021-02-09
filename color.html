@@ -6,138 +6,12 @@
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./css/color.css">
   <link rel="stylesheet" href="./css/color_picker.css">
+  <link rel="stylesheet" href="./css/pop_up.css">
   <link rel="stylesheet" href="./css/image_upload.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
   <script data-ad-client="ca-pub-2985510986843870" async
     src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-
-  <style>
-    /*팝업창*/
-    #popup {
-      top: 0;
-      display: none;
-      /*숨기기*/
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.8);
-      z-index: 1;
-    }
-
-    #popmenu {
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      width: 700px;
-      height: 300px;
-      text-align: center;
-      background: #fff;
-      border-radius: 30px;
-      border: #ac97ff solid 2px;
-    }
-
-    #popmenu p {
-      margin-top: 80px;
-    }
-
-    .popup-container {
-      display: flex;
-      width: 100%;
-      height: 100%;
-    }
-
-    .popup-left {
-      display: inline-block;
-      padding: 20px;
-      margin: 20px;
-    }
-
-    .right-text-wrap {
-      padding: 15px;
-    }
-
-    .right-title {
-      text-align: left;
-      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-      font-size: 20px;
-      color: #33097f;
-      padding-top: 22px;
-    }
-
-    .right-text {
-      text-align: left;
-      padding-top: 20px;
-      font-weight: 600;
-      line-height: 2.0rem;
-    }
-
-    .popup-btn-wrap {
-      padding-top: 16px;
-    }
-
-    .popup-btn {
-      background-color: #af83f6;
-      color: #FFFFFF;
-      border-radius: 5px;
-      text-align: center;
-      height: 45px;
-      width: 120px;
-      margin: 5px;
-      vertical-align: middle;
-      letter-spacing: 1.5px;
-      border: none;
-      text-decoration: none;
-      font-size: 15px;
-      ;
-      cursor: pointer;
-      float: left;
-      margin-left: 20px;
-    }
-
-    .popup-btn:hover {
-      background-color: #6714ed;
-    }
-
-    .popup-btn:focus {
-      outline: none;
-    }
-
-    legend {
-      background-color: #000;
-      color: #fff;
-      padding: 3px 6px;
-    }
-
-    .output {
-      font: 1rem 'Fira Sans', sans-serif;
-    }
-
-    input {
-      margin: .4rem;
-    }
-
-    .select-wrap {
-      text-align: left;
-      margin-left: 20px;
-    }
-
-    div.slider::before {
-      background-color: transparent !important;
-    }
-
-    /*본문내용*/
-    /*#contents {
-    width: 300px;
-    height: 150px;
-    text-align: center;
-    line-height: 150px;
-    color: #fff;
-    background: #555;
-    cursor: pointer;
-}*/
-  </style>
 
 <body>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
@@ -1733,7 +1607,7 @@ c-1.3-3.7-3.7-7-7-9.1C329.7,196.6,327.3,196,325.1,196z" />
     }
     var openWindow = window.open(
       url,
-      'a', 'width=880,height=643,top=100,left=100')
+      'a', 'width=870,height=520,top=100,left=300')
     
     // if (document.querySelector(".image-upload-wrap").style.display === 'none') {
     //   openWindow.uploadImage = document.querySelector('.file-upload-image').src;
