@@ -14,7 +14,8 @@
  * limitations under the License.
  * =============================================================================
  */
-import checkBoxImage from './img/check2.png'
+import checkBoxImage from './img/check2.png';
+import inforMation from './img/information.png';
 import "./css/control.css";
 import * as posenet_module from '@tensorflow-models/posenet';
 import * as facemesh_module from '@tensorflow-models/facemesh';
@@ -176,7 +177,7 @@ function setupGui(cameras) {
   var divEle = document.createElement("control");
   divEle.innerHTML = `
   <div class="control-wrap">
-  <div class="control-recommend">We recommend Google Chrome browser.</div>
+  <div class="control-recommend"><img src="${inforMation}"><h1>We recommend Google Chrome browser.</h1></div>
   <div class="ment">
   Add "Display Capture" on Broadcaster Right-click on the "Display Capture" Go to "properties" :</div>
   <div class="ment-box">
