@@ -1,0 +1,82 @@
+ /*팝업창*/
+@font-face{font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; src: local(Franklin), url(https://fonts.adobe.com/fonts/franklin-gothic-urw.woff) format("woff");} 
+
+#email-popup{
+    text-align: center;
+    
+}
+.email-container{
+    border: 2px solid #9E67F4;
+    border-radius: 10px;
+    display: inline-block;
+    padding: 30px;
+}
+.email-img{margin: 10px;display: inline-block;}
+  .popup-btn-wrap {
+    padding-top: 16px;
+  }
+.email-title{font-size: 25px; color: #7854F7; font-weight: 700; margin: 10px;padding: 10px;}
+.email-txt{line-height: 1.5rem; margin: 10px; color: #515151; font-weight: 600;}
+.email-form{font-family: 'Franklin Gothic Medium', 'Arial Narrow', sans-serif; color: #7854F7; margin: 10px; padding-top: 10px; }
+.form-txt{font-size:18px; margin: 10px; text-align: left;}
+.form-box input{border: 1px solid #7854F7; border-radius: 20px; padding: 10px; width: 254px; }
+.form-box input:focus{outline: none;}
+.email-btn-wrap{padding-top: 10px;}
+  .popup-btn {
+    background-color: #af83f6;
+    color: #FFFFFF;
+    border-radius: 5px;
+    text-align: center;
+    height: 45px;
+    width: 120px;
+    margin: 5px;
+    vertical-align: middle;
+    letter-spacing: 1.5px;
+    border: none;
+    text-decoration: none;
+    font-size: 15px;
+    ;
+    cursor: pointer;
+  }
+
+  .popup-btn:hover {
+    background-color: #6714ed;
+  }
+
+  .popup-btn:focus {
+    outline: none;
+  }
+
+  legend {
+    background-color: #000;
+    color: #fff;
+    padding: 3px 6px;
+  }
+
+  .output {
+    font: 1rem 'Fira Sans', sans-serif;
+  }
+
+  input {
+    margin: .4rem;
+  }
+
+  .select-wrap {
+    text-align: left;
+    margin-left: 20px;
+  }
+
+  div.slider::before {
+    background-color: transparent !important;
+  }
+
+  /*본문내용*/
+  /*#contents {
+  width: 300px;
+  height: 150px;
+  text-align: center;
+  line-height: 150px;
+  color: #fff;
+  background: #555;
+  cursor: pointer;
+}*/
