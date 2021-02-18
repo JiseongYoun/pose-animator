@@ -7,7 +7,7 @@
  *
  * https://www.apache.org/licenses/LICENSE-2.0
  *
- * Unless required by applicable law or agreed to in writing, software
+ * Unless required by applicable law or d to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
@@ -58,15 +58,15 @@ import * as boySVG from './resources/illustration/boy.svg';*/
 
 // Camera stream video element
 let video;
-let videoWidth = 400;
+let videoWidth = 350;
 let videoHeight = 300;
 
 // Canvas
 let faceDetection = null;
 let illustration = null;
 let canvasScope;
-let canvasWidth = 500;
-let canvasHeight = 375;
+let canvasWidth = null;
+let canvasHeight = null;
 
 // ML models
 let facemesh;
@@ -177,7 +177,11 @@ function setupGui(cameras) {
   var divEle = document.createElement("control");
   divEle.innerHTML = `
   <div class="control-wrap">
+<<<<<<< HEAD
   <div class="control-recommend"><h1>- We recommend Google Chrome browser.</h1></div>
+=======
+  <div class="control-recommend"><h1>We recommend Google Chrome browser.</h1></div>
+>>>>>>> b711222c9cbf0a1cf1343393db3b3cc47051c7da
   <div class="ment-wrap">
   Add "Display Capture" on Broadcaster Right-click on the "Display Capture" Go to "properties" :</div>
   <div class="ment-box">

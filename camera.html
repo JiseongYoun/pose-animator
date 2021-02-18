@@ -13,13 +13,11 @@
         
 
         .canvas-container {
-            /*width: 800px;*/
-            /*max-width: 100%;*/
-            /*display: flex;*/
-            /*display: block;*/
-            /*justify-content: center;*/
-            /*position: absolute;*/
-            width: 500px;
+            /*width: 800px;
+            max-width: 100%;
+            justify-content: center;
+            position: absolute;*/
+            width: 200px;
             margin: 10px;
             padding: 10px;
             display: block;
@@ -66,11 +64,18 @@
         }
 
         #output{
+<<<<<<< HEAD
               position: absolute;
             transform: scale(0.5, 0.5);
             transform-origin: 0 0;
             display: inline-block;
             /*padding: 12px;*/
+=======
+            position: absolute;
+            transform: scale(0.5, 0.5);
+            transform-origin: 0 0;
+            display: inline-block;
+>>>>>>> b711222c9cbf0a1cf1343393db3b3cc47051c7da
         }
 
         .footer {
@@ -86,15 +91,28 @@
             text-align: center;
             margin: auto;
         }
+<<<<<<< HEAD
         
+=======
+        @media only all and (max-width:1024px) {
+            .canvas-container{
+                width: auto;
+                display: inline-block;
+            }
+>>>>>>> b711222c9cbf0a1cf1343393db3b3cc47051c7da
+
+        }
 
         @media only screen and (max-width: 600px) {
-
+            
             .footer-text,
             .dg {
                 display: none;
             }
         }
+        /*@media only all and (max-width: 320px) {
+            #tempImage{width:275px; height: 260px;}
+        }*/
 
         /*
          *  The following loading spinner CSS is from SpinKit project

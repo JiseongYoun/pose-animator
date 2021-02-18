@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>email pop up</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/email.css">
+</head>
+
+<body>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $("#ready-btn").click(function () {
+        $("#email-popup").fadeIn();
+      });
+      $("#ready-btn").click(function () {
+        $("#email-popup").fadeOut();
+      });
+    });
+  </script>
+  <div id="email-popup-wrap">
+    <div id="email-popup">
+      <div class="email-container">
+        <div class="email-content-01">
+          <div class="email-img">
+            <img src="./img/mail-icon.png">
+          </div>
+          <div class="email-txt-wrap">
+            <div class="email-title">Contact us</div>
+            <div class="email-txt">Thanks for your interest in AVAAVA !<br>
+              Please fill out ...
+            </div>
+          </div>
+        </div>
+
+        <div class="email-content-02">
+          <div class="email-form">
+            <div class="form-txt">
+              <h2>Email</h2>
+            </div>
+            <div class="form-box">
+              <form>
+                <input type="text" name="email">
+              </form>
+            </div>
+          </div>
+
+          <div class="email-btn-wrap">
+            <button class="submit popup-btn" type="button" id="submit-btn">Submit</button>
+            <button class="cancel popup-btn" type="button" id="cancel-btn">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
