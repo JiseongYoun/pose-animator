@@ -100,32 +100,37 @@ input[type="button"]:after{content: '\00bb'; position: absolute; opacity: 0; top
 .ava-right-wrap{display: flex; flex-direction: column; width: 50%; justify-content: center; }
 .ava-right{width:80%; margin: 0 auto; padding: 10px;}
 /*.ava-right{margin:0 auto;}*/
-
+@media only all and (max-width:1843px){
+  .content h1{font-size: 84px;}
+}
 @media only all and (max-width:1600px){
     .ava-flex-container{height: 700px;}
     .ava-header{margin: 0;}
     .ava-left-wrap{width: 100%; margin: 0 auto;}
-    .ava-left{padding: 0;margin: 0; position: relative; left: 30px;}
-    .left-title{padding:0;font-size: 84px;}
-    .left-title img{width:100%;}
+    .ava-left{padding: 0;margin: 0; position: relative; left: 38px; top: 25px;}
+    /*.content h1{padding:0;font-size: 84px;}*/
     .left-recommended{margin: 10px; padding: 0;}
     .ava-right-wrap{width: 100%;}
     .ava-right{width: 85%;}
 
 }
 @media only all and (max-width:1440px){
-    .left-title{font-size: 77px;}
+    .content h1{font-size: 77px;}
 }
 @media only all and (max-width:1024px){
     .ava-flex-container{display: inline-block; position: relative; top: 110px;}
     .ava-left-wrap{width: 100%; margin: 0 auto;}
-    .ava-left{padding: 0;margin: 0;}
-    .left-title{font-size: 70px;}
-    .left-title img{width:80%;}
-    .left-text p{left:106px;}
+    .content h1{font-size: 90px; text-align: center;}
+    .left-text p{position: relative; top: 10px; text-align: center;}
+    .left-button{margin-top: 100px;}
     .left-recommended{ margin: 10px;}
     .ava-right-wrap{width: 100%;}
-    .ava-right{width: 100%;}
+    .ava-right{width: 70%;}
+    .content{background: none; mix-blend-mode: inherit;}
+    .shapes{background: none;}
+    .shape{display: none;}
+    .content h1{color: #560aa9;}
+    
 }
 
 @media only all and (max-width: 720px) {
@@ -134,9 +139,10 @@ input[type="button"]:after{content: '\00bb'; position: absolute; opacity: 0; top
     .ava-right svg{width:90%;}
   }
 
-@media only all and (max-width: 425px){
+/*@media(min-width: 425px){
     .ava-flex-container{display: block; width: 100%;}
+    .ava-left-wrap{margin: 0 auto;}
     .ava-left-wrap{display: block; width: 100%;}
     .ava-left{text-align: center; padding: 0;}
-}
+}*/
   

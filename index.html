@@ -5,14 +5,75 @@
   <title>Avatar Animator</title>
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/email.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script data-ad-client="ca-pub-2985510986843870" async
     src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $("#ready-btn").on('click', function () {
+        $("#email-popup-wrap").fadeIn();
+      });
+      $("#cancel-btn").on('click', function () {
+        window.location.href = "./color.html"
+        /*$("#email-popup-wrap").fadeOut();*/
+      });
+      $("#submit-btn").on('click', function () {
+        window.location.href = "./color.html"
+      });
+    });
+
+    $(function() {
+    $("#cancel-btn").on('click', function() {
+        self.close();
+    });
+});
+  </script>
+  <script>
+  </script>
+  <script src="main.js"></script>
 </head>
 
 <body>
-  <script src="main.js"></script>
+  <!--email popup-->
+  <div id="email-popup-wrap">
+    <div id="email-popup">
+      <div class="email-container">
+        <div class="email-content-01">
+          <div class="email-img">
+            <img src="./img/mail-icon.png">
+          </div>
+          <div class="email-txt-wrap">
+            <div class="email-title">Contact us</div>
+            <div class="email-txt">Thanks for your interest in AVAAVA !<br>
+              Please fill out ...
+            </div>
+          </div>
+        </div>
+
+        <div class="email-content-02">
+          <div class="email-form">
+            <div class="form-txt">
+              <h2>Email</h2>
+            </div>
+            <div class="form-box">
+              <form method="POST" action="submit_email.php">
+                <input type="text" name="email">
+                <div class="email-btn-wrap">
+                  <button class="submit popup-btn" type="submit" id="submit-btn">Submit</button>
+                  <button class="cancel popup-btn" type="button" id="cancel-btn">Cancel</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--main-->
   <div class="main-container">
     <div class="ava-header">
       <div class="header-logo">
@@ -40,7 +101,7 @@
         </div>
 
         <div class="left-button">
-          <input type="button" value="READY?" onclick="location.href='color.html'"><a href="./color.html"></a>
+          <input type="button" value="READY?" id="ready-btn"/>
         </div>
         <div class="left-recommended">
           <div class="recommended-wrap">

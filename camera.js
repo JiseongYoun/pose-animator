@@ -177,7 +177,7 @@ function setupGui(cameras) {
   var divEle = document.createElement("control");
   divEle.innerHTML = `
   <div class="control-wrap">
-  <div class="control-recommend"><img src="${inforMation}"><h1>We recommend Google Chrome browser.</h1></div>
+  <div class="control-recommend"><h1>- We recommend Google Chrome browser.</h1></div>
   <div class="ment-wrap">
   Add "Display Capture" on Broadcaster Right-click on the "Display Capture" Go to "properties" :</div>
   <div class="ment-box">
